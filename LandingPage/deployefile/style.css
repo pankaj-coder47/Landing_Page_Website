@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+.email{
+    height: 206px;
+    width: 230px;
+}
+
+ 
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&family=Sedgwick+Ave+Display&family=Space+Grotesk&display=swap');
+ 
+
+body{
+    font-family: 'Space Grotesk', sans-serif; 
+    background-color: #1e1f31;
+    overflow-x: hidden;
+}
+.wrapper{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.logo{
+    font-size:40px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #fff;
+    text-shadow: 0px 5px 10px #fff;
+    outline: none;
+    
+}
+.logo span{
+    font-family: 'Sedgwick Ave Display', cursive;
+    color: #0099ff;
+    font-weight: 800;
+    text-shadow: 0px 5px 10px #0099ff;
+}
+header{
+    padding: 50px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header ul li a{
+    color: #aba9b4;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all ease 0.5s;
+}
+
+header ul li a:hover{
+    color:#0099ff ;
+}
+header ul li a.btn{
+    display: inline-block;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    background-color: #0099ff;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all ease 0.5s;
+}
+/* #f09053 */
+header ul li a.btn:hover{
+    background: rgba(255, 255, 255, 0.5);
+    color: #1e1f31;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 100px 0;
+    
+}
+.text{
+    width: 50%;
+    padding-right: 150px;
+    margin-top: 90px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+.text p{
+    font-size: 28px;
+    line-height: 46px;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 300;
+}
+.text p span{
+    color: #0099ff;
+    font-family: 'Space Grotesk', sans-serif;
+
+
+}
+.text a{
+    position: relative;
+    display: inline-block;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none;
+    padding: 23px 30px ;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: 60px;
+}
+.text a::before{
+    content:"";
+    position: absolute;
+    top: -0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: #0099ff;
+    z-index: -1;
+    transition: all ease 0.5s;
+}
+.text a:hover:before{
+    width: 100%;
+}
+.img{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(500px,#0099ff,transparent 50%);
+    margin-top:-50px;
+}
+.email{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+.social-icons{
+    height: 100%;
+    animation: rotate 60s linear infinite;
+
+}
+@keyframes rotate {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.social-icons img{
+    position: absolute;
+}
+.social-icons img:nth-child(1){
+    top: 0;
+    left: 42%;
+}
+.social-icons img:nth-child(2){
+    top: 25%;
+    right: 0;
+}
+.social-icons img:nth-child(3){
+    top: 82%;
+    left: 71%;
+}
+.social-icons img:nth-child(4){
+    top: 25%;
+    left: 0;
+}
+.social-icons img:nth-child(5){
+    top: 80%;
+    left: 11%;
+}
+.wave{
+    position: absolute;
+    bottom: -20%;
+    left: 0;
+    width: 100%;
+    line-height: 0;
+}
+.wave::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background: url("icons/wave.svg") no-repeat;
+    background-size: cover;
+    background-position: -1000px 0;
+    opacity: 0.2;
+    animation: waveOne 60s linear infinite;
+}
+@keyframes waveOne {
+    50%{
+        background-position: 0 0;
+    }
+}
+ul ul {
+    max-width: 250px;
+    position: absolute;
+    padding: 10px 0;
+    opacity: 0;
+    z-index: -999;
+    transition: all ease 0.5s;
+
+}
+ul li:hover ul{
+    opacity: 1;
+    z-index: 9;
+    padding: 30px 0;
+}
+ul ul li{
+    margin: 0;
+    width: 100%;
+}
+ul ul li a{
+    width: 100%;
+    display: inline-block;
+    padding: 20px;
+    background-color: #2b2d46;
+    color: #fff;
+}
+ul ul li:first-child a{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+}
+ul ul li:last-child a{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+ul ul li a:hover{
+    background-color: #0099ff;
+    color: #fff;
+
+}
